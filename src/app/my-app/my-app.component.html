@@ -1,0 +1,19 @@
+<code class="bg-dark text-warning px-3 py-1">my-app-component</code>
+<h1 class="bg-light text-center p-5 h3" *ngIf="showTotalSongs">
+  Total number of songs in the DATABASE: <code>{{ totalNumberOfSongs }}</code>
+  <hr />
+  Total number of songs in MY-PLAYLIST:
+  <code>{{ totalNumberOfSongsInPlaylist || 0 }}</code>
+</h1>
+
+<button
+  type="button"
+  name=""
+  id=""
+  class="btn btn-secondary w-100 btn-block"
+  (click)="showTotalSongs = !showTotalSongs"
+>
+  Toggle - total number of songs
+</button>
+<br />
+<hr />

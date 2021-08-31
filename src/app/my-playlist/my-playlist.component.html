@@ -1,0 +1,16 @@
+<code class="bg-dark text-warning px-3 py-1">my-playlist-component</code>
+<div class="container">
+  <h3 class="my-3">My Playlist</h3>
+
+  <div *ngIf="myPlaylist; else empty">
+    <ul class="list-group" *ngFor="let song of myPlaylist">
+      <li class="list-group-item p-3 bg-secondary m-1">
+        <code class="h4 text-light">{{ song }}</code>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #empty>
+    <code class="h4">Empty-Playlist</code>
+  </ng-template>
+</div>
